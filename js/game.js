@@ -6,6 +6,7 @@ const KEY_CODE_PAUSE = 80;
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 600;
 
+
 const PLAYER_WIDTH = 20;
 const PLAYER_MAX_SPEED = 400.0; //how fast should the player move?
 const LASER_MAX_SPEED = 400.0;
@@ -31,6 +32,7 @@ const GAME_STATE = {
   enemies: [],
   enemyLasers: [],
   gameOver: false,
+  //playerLives: 2,
 };
 
 
@@ -68,7 +70,7 @@ function createPlayer($container) {
   GAME_STATE.playerX = GAME_WIDTH / 2;
   GAME_STATE.playerY = GAME_HEIGHT - 50;
   const $player = document.createElement("img");
-  $player.src = "img/player-blue-1.png";
+  $player.src = "img/unnamed.png";
   $player.className = "player";
   $container.appendChild($player);
   setPosition($player, GAME_STATE.playerX, GAME_STATE.playerY);
@@ -145,6 +147,7 @@ function updateLasers(dt, $container) {
   GAME_STATE.lasers = GAME_STATE.lasers.filter(e => !e.isDead);
 }
 
+//rename to make sense
 function destroyLaser($container, laser) {
   $container.removeChild(laser.$element);
   laser.isDead = true;
