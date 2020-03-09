@@ -1,6 +1,6 @@
 const KEY_CODE_LEFT = 37;   //ARROW KEYS - Line 1-4. 
 const KEY_CODE_RIGHT = 39;
-const KEY_CODE_SPACE = 32;
+const KEY_CODE_SPACE = 38; //32
 const KEY_CODE_PAUSE = 80;
 
 const GAME_WIDTH = 800;
