@@ -80,7 +80,7 @@ function createPlayer($container) {
 function destroyPlayer($container, player) {
   $container.removeChild(player);
   GAME_STATE.gameOver = true;
-  const audio = new Audio("sound/sfx-lose.ogg");
+  const audio = new Audio("sound/laser.ogg");
   audio.play();
 }
 
@@ -119,7 +119,7 @@ function createLaser($container, x, y) {   //simple mix between dom and js this 
   $container.appendChild($element);
   const laser = { x, y, $element };
   GAME_STATE.lasers.push(laser); //method for the laser. 
-  const audio = new Audio("sound/sfx-laser1.ogg");
+  const audio = new Audio("sound/laser.ogg");
   audio.play();
   setPosition($element, x, y);
 }
